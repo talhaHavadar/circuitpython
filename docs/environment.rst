@@ -56,6 +56,9 @@ CircuitPython behavior
 CircuitPython will also read the environment to configure its behavior. Other
 keys are ignored by CircuitPython. Here are the keys it uses:
 
+Core CircuitPython keys
+^^^^^^^^^^^^^^^^^^^^^^^
+
 CIRCUITPY_BLE_NAME
 ~~~~~~~~~~~~~~~~~~
 Default BLE name the board advertises as, including for the BLE workflow.
@@ -95,5 +98,23 @@ CIRCUITPY_WIFI_SSID
 ~~~~~~~~~~~~~~~~~~~
 Wi-Fi SSID to auto-connect to even if user code is not running.
 
-In some cases there are additional board specific keys, consult the board
-descriptions on https://circuitpython.org/downloads for more information.
+Additional board specific keys
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`MaTouch ESP32-S3 Parallel TFT with Touch 7“ <https://circuitpython.org/board/makerfabs_tft7/>`_
+
+CIRCUITPY_DISPLAY_WIDTH
+~~~~~~~~~~~~~~~~~~~~~~~
+Selects the correct screen resolution (1024x600 or 800x640) for the particular board variant.
+If the CIRCUITPY_DISPLAY_WIDTH parameter is set to a value of 1024 the display is initalized
+during power up at 1024x600 otherwise the display will be initialized at a resolution 
+of 800x480.
+
+`Sunton ESP32-2432S028 <https://circuitpython.org/board/sunton_esp32_2432S028/>`_
+
+CIRCUITPY_DISPLAY_ROTATION
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Selects the correct screen rotation (0, 90, 180 or 270) for the particular board variant.
+If the CIRCUITPY_DISPLAY_ROTATION parameter is set the display will be initalized 
+during power up with the selected rotation, otherwise the display will be initialized with
+a rotation of 0.
