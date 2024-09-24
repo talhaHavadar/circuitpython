@@ -94,3 +94,6 @@ Wi-Fi password used to auto connect to CIRCUITPY_WIFI_SSID.
 CIRCUITPY_WIFI_SSID
 ~~~~~~~~~~~~~~~~~~~
 Wi-Fi SSID to auto-connect to even if user code is not running.
+
+In some cases there are additional board specific keys, consult the board 
+descriptions on https://circuitpython.org/downloads for more informaton.
