@@ -117,4 +117,5 @@ CIRCUITPY_DISPLAY_ROTATION
 Selects the correct screen rotation (0, 90, 180 or 270) for the particular board variant.
 If the CIRCUITPY_DISPLAY_ROTATION parameter is set the display will be initialized
 during power up with the selected rotation, otherwise the display will be initialized with
-a rotation of 0.
+a rotation of 0. Attempting to initialize the screen with a rotation other than 0,
+90, 180 or 270 is not supported and will result in an unexpected screen rotation.
